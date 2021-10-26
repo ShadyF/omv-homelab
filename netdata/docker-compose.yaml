@@ -1,0 +1,40 @@
+version: '2.4'
+
+services:
+  netdata:
+    image: netdata/netdata
+    hostname: 192.168.1.142
+    container_name: netdata
+    restart: unless-stopped
+    networks:
+      - traefik_default
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - apparmor:unconfined
+    environment:
+      - PGID=993
+      - DO_NOT_TRACK=1
+    volumes:
+      - netdataconfig:/etc/netdata
+      - netdatalib:/var/lib/netdata
+      - netdatacache:/var/cache/netdata
+      - /etc/passwd:/host/etc/passwd:ro
+      - /etc/group:/host/etc/group:ro
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /etc/os-release:/host/etc/os-release:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.netdata.rule=Host(`netdata.secret.domain`)"
+      - "traefik.http.routers.netdata.tls=true"
+      - "traefik.http.services.netdata.loadbalancer.server.port=19999"
+
+networks:
+  traefik_default:
+    external: true
+volumes:
+  netdataconfig:
+  netdatalib:
+  netdatacache:
