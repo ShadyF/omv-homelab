@@ -25,7 +25,7 @@ maintained in [this repo](https://github.com/ShadyF/k8s-homelab)
 | GPU    | AMD Radeon HD 6950                          |
 | PSU    | Antec 650W                                  |
 
-## :straight_ruler: Random Tips and Tricks
+## :straight_ruler:&nbsp; Random Tips and Tricks
 
 #### Network mode
 
