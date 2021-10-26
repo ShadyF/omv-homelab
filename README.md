@@ -8,22 +8,24 @@
 
 ## :book:&nbsp; Overview
 
-This repository contains various `docker-compose` files for applications that I had running on a spare computer I have.
+This repository contains various `docker-compose` files for applications that I ran on a spare computer that I had.
 
 This repo is mainly for archival and historical purposes as I have moved everything into a kubernetes cluster,
-maintained in [this repo](https://github.com/ShadyF/k8s-homelab).
+maintained in [this repo](https://github.com/ShadyF/k8s-homelab)
 
 ## :computer:&nbsp; Infrastructure
 
-[openmediavault](https://www.openmediavault.org/) installed on a spare computer I had.
+[openmediavault](https://www.openmediavault.org/) installed on a spare computer I had
 
-| CPU    | Intel Core i5-2500K (Overclocked to 4.5GHz) |
+| Component    | Details |
+|--------|---------------------------------------------|
+| CPU    | Intel Core i5-2500K (Overclocked to **4.5GHz**) |
 | Cooler | Cooler Master Hyper 212 EVO                 |
 | RAM    | 8GB DDR3                                    |
 | GPU    | AMD Radeon HD 6950                          |
 | PSU    | Antec 650W                                  |
 
-## Random Tips and Tricks
+## :straight_ruler: Random Tips and Tricks
 
 #### Network mode
 
